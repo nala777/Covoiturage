@@ -18,7 +18,7 @@ class City
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?int $postal_code = null;
+    private ?string $postal_code = null;
 
     #[ORM\Column(length: 255)]
     private ?string $lattitude = null;
