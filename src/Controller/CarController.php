@@ -19,7 +19,7 @@ class CarController extends AbstractController
     public function listeVoiture(CarRepository $doctrine, SerializerInterface $serializerInterface): JsonResponse
     {
         $liste = $doctrine->findAll();
-        $listeJson = $serializerInterface->serialize($liste, 'json');
+        $listeJson = $serializerInterface->serialize($liste, 'json', ['groups' => 'GetCar']);
 
         return new JsonResponse($listeJson, 200, [], true);
     }

@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CarRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\DBAL\Types\Types;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: CarRepository::class)]
 class Car
@@ -12,21 +13,27 @@ class Car
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $registration_car = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $color = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?int $places = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?Brand $type_of = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $model = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]

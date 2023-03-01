@@ -8,15 +8,18 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
@@ -27,12 +30,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $password = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(["GetUser", "GetRide", "GetCar"])]
     private ?string $lastname = null;
 
     #[ORM\OneToMany(mappedBy: 'conducteur', targetEntity: Ride::class)]

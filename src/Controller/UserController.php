@@ -15,11 +15,11 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 class UserController extends AbstractController
 {
-    #[Route('/listePersonne', name: 'liste_inscription', methods: "GET")]
-    public function listeInscription(UserRepository $doctrine, SerializerInterface $serializerInterface): JsonResponse
+    #[Route('/listePersonne', name: 'liste_personne', methods: "GET")]
+    public function listePersonne(UserRepository $doctrine, SerializerInterface $serializerInterface): JsonResponse
     {
         $liste = $doctrine->findAll();
-        $listeJson = $serializerInterface->serialize($liste, 'json');
+        $listeJson = $serializerInterface->serialize($liste, 'json', ['groups' => 'GetUser']);
 
         return new JsonResponse($listeJson, 200, [], true);
     }
