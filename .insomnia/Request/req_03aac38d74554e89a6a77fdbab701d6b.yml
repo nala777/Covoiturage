@@ -1,0 +1,21 @@
+_id: req_03aac38d74554e89a6a77fdbab701d6b
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677643597545
+created: 1677640527569
+url: http://127.0.0.1:8000/deleteVille/1
+name: Delete Ville
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677640527569
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_88a54e64fae3438897bfe176a1bac945
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677648059910
+created: 1677648023413
+url: http://127.0.0.1:8000/deletePersonne/1
+name: Delete Personne
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677648023413
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

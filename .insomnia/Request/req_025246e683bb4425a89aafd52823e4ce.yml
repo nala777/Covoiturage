@@ -1,0 +1,21 @@
+_id: req_025246e683bb4425a89aafd52823e4ce
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677644020398
+created: 1677643609492
+url: http://127.0.0.1:8000/deleteMarque/2
+name: Delete Marque
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677643609492
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

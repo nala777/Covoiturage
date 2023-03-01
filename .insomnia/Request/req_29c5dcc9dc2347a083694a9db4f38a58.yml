@@ -1,0 +1,45 @@
+_id: req_29c5dcc9dc2347a083694a9db4f38a58
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677650232234
+created: 1677649083777
+url: http://127.0.0.1:8000/insertVoiture
+name: Insert Voiture
+description: ""
+method: POST
+body: {}
+parameters:
+  - id: pair_46cc7f9fd33046128c9d4f9a23175916
+    name: id_pers
+    value: "3"
+    description: ""
+  - id: pair_c52e4313e17240db8002c24f732ba748
+    name: plaque
+    value: AX325CB
+    description: ""
+  - id: pair_a85c2091c91a4abf85746ef24c5c582e
+    name: color
+    value: Bleu
+    description: ""
+  - id: pair_092ebc7331b44d9bb3488ddccc29dddf
+    name: brand
+    value: CITROEN
+    description: ""
+  - id: pair_98b565f57a70468a96f2fd63b793319a
+    name: model
+    value: C3
+    description: ""
+  - id: pair_dbb06886abeb46ada91147139ad2a8ae
+    name: places
+    value: "3"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1677649083777
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

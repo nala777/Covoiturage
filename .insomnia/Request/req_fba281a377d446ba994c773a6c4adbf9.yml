@@ -1,0 +1,25 @@
+_id: req_fba281a377d446ba994c773a6c4adbf9
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677644327513
+created: 1677643347174
+url: http://127.0.0.1:8000/listeMarques
+name: Liste Marques
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_611dce7736854b3c9229550a8c3c3bad
+    name: ""
+    value: ""
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1677643347174
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_c7e2b33c1f6141d4af61b2dce002174a
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677648358949
+created: 1677647752788
+url: http://127.0.0.1:8000/selectPersonne/3
+name: Select Personne
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677647752788
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

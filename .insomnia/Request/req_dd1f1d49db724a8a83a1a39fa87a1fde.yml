@@ -1,0 +1,26 @@
+_id: req_dd1f1d49db724a8a83a1a39fa87a1fde
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677647550072
+created: 1677643957152
+url: http://127.0.0.1:8000/insertMarque
+name: Insert Marque
+description: ""
+method: POST
+body: {}
+parameters:
+  - id: pair_2355154cd92b4db6a0e2538b4085e6ab
+    name: name
+    value: ""
+    description: ""
+    disabled: false
+headers: []
+authentication: {}
+metaSortKey: -1677643478333
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

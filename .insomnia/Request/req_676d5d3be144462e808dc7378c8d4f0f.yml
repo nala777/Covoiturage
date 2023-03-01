@@ -1,0 +1,21 @@
+_id: req_676d5d3be144462e808dc7378c8d4f0f
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677643357954
+created: 1677642883550
+url: http://127.0.0.1:8000/listeVilles
+name: Liste Villes
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677642883550
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

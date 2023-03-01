@@ -1,0 +1,37 @@
+_id: req_77d0208653af43d79e9367bf46bdeae0
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677648114704
+created: 1677647553764
+url: http://127.0.0.1:8000/insertPersonne
+name: Insert Personne
+description: ""
+method: POST
+body: {}
+parameters:
+  - id: pair_e346f91ef63c40ffa8cbf7fba25c753e
+    name: email
+    value: test4@gmail.com
+    description: ""
+  - id: pair_97617bcc155444e1b16a263bbf5561f3
+    name: password
+    value: test
+    description: ""
+  - id: pair_1dbbe9de439c4f0b99b4ccc5a9648ebe
+    name: firstname
+    value: mi4
+    description: ""
+  - id: pair_8c7534f334ae465ebc590fa643cf0b44
+    name: lastname
+    value: pou4
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1677647553764
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

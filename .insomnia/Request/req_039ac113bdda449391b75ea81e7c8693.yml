@@ -1,0 +1,21 @@
+_id: req_039ac113bdda449391b75ea81e7c8693
+type: Request
+parentId: wrk_eb754a66356141aa93715d31bfce9501
+modified: 1677647749378
+created: 1677647712158
+url: http://127.0.0.1:8000/listePersonne
+name: Liste Personne
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1677647712158
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
