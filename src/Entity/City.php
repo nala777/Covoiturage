@@ -17,7 +17,7 @@ class City
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::SMALLINT)]
+    #[ORM\Column(length: 255)]
     private ?int $postal_code = null;
 
     #[ORM\Column(length: 255)]
@@ -29,18 +29,6 @@ class City
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdCity(): ?int
-    {
-        return $this->id_city;
-    }
-
-    public function setIdCity(int $id_city): self
-    {
-        $this->id_city = $id_city;
-
-        return $this;
     }
 
     public function getName(): ?string

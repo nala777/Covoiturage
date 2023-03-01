@@ -1,4 +1,5 @@
 {
+    
     "doctrine/doctrine-bundle": {
         "version": "2.8",
         "recipe": {
