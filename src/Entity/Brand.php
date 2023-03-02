@@ -13,12 +13,12 @@ class Brand
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[Groups(['brand:read'])]
     #[ORM\Column]
+    #[Groups(["GetBrand"])]
     private ?int $id = null;
 
-    #[Groups(['brand:read'])]
     #[ORM\Column(length: 255)]
+    #[Groups(["GetBrand", "GetCar", "GetUser"])]
     private ?string $name = null;
 
 

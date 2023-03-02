@@ -13,27 +13,27 @@ class Car
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetCar"])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetCar", "GetUser"])]
     private ?string $registration_car = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetCar", "GetUser"])]
     private ?string $color = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetCar"])]
     private ?int $places = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetCar", "GetUser"])]
     private ?Brand $type_of = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetUser"])]
     private ?string $model = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]

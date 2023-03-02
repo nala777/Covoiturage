@@ -41,29 +41,29 @@ class RideController extends AbstractController
         }
     }
 
-    // #[Route('/insertTrajet', name: 'insert_trajet', methods: "POST")]
-    // public function insertTrajet(Request $request, RideRepository $doctrine, EntityManagerInterface $entityManager): JsonResponse
-    // {
-    //     $fdate = date("d.m.y");
-    //     $date = $fdate($request->query->get('date'));
+    #[Route('/insertTrajet', name: 'insert_trajet', methods: "POST")]
 
-    //     if ($date == null) {
-    //         return new JsonResponse("Trajet vide", 404, [], true);
-    //     } else {
-    //         $trajet = new Ride();
-    //         $trajet->setDate($date);
-    //         $depart_city = $entityManager->getRepository(City::class)->findOneBy(["id" => $request->query->get("id_vd")]);
-    //         $arrival_city = $entityManager->getRepository(City::class)->findOneBy(["id" => $request->query->get("id_va")]);
-    //         $personne = $entityManager->getRepository(User::class)->findOneBy(["id" => $request->query->get("id_pers")]);
-    //         $trajet->setStartCity($depart_city);
-    //         $trajet->setArrivalCity($);
-    //         $trajet->setConducteur($personne);
-    //         $trajet->setKms($request->query->get('kms'));
-
-    //         $entityManager->persist($trajet);
-    //         $entityManager->flush();
-
-    //         return new JsonResponse("Trajet ajouté", 200, [], true);
-    //     }
-    // }
+    public function insertTrajet(Request $request, RideRepository $doctrine, EntityManagerInterface $entityManager): JsonResponse
+    {
+        $date = $request->query->get('date');
+        $departurehour = $request->query->get('departurehour');
+        $departure = $request->query->get('id_departure');
+        $arrival = $request->query->get('id_arrival');
+        $user = $request->query->get('id_user');
+        $kms = $request->query->get('kms');
+        if ($date == null || $departurehour == null || $departure == null || $arrival == null || $user == null || $kms == null) {
+            return new JsonResponse("Trajet vide", 404, [], true);
+        } else {
+            $trajet = new Ride;
+            $trajet->setStartHour($departurehour);
+            $trajet->setDeparture($departure);
+            $trajet->setArrival($arrival);
+            $trajet->setKms($kms);
+            $personne = $entityManager->getRepository(User::class)->findOneBy(["id" => $user]);
+            $trajet->setConducteur($personne);
+            $entityManager->persist($trajet);
+            $entityManager->flush();
+            return new JsonResponse("Trajet ajouté", 200, [], true);
+        }
+    }
 }

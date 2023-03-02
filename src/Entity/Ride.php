@@ -26,14 +26,10 @@ class Ride
     #[ORM\Column(nullable: true)]
     private ?int $kms = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $date = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $start_hour = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $arrival_hour = null;
 
     #[ORM\ManyToOne(inversedBy: 'rides')]
     private ?User $conducteur = null;
@@ -87,18 +83,6 @@ class Ride
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(?\DateTimeInterface $date): self
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
     public function getStartHour(): ?\DateTimeInterface
     {
         return $this->start_hour;
@@ -111,17 +95,6 @@ class Ride
         return $this;
     }
 
-    public function getArrivalHour(): ?\DateTimeInterface
-    {
-        return $this->arrival_hour;
-    }
-
-    public function setArrivalHour(?\DateTimeInterface $arrival_hour): self
-    {
-        $this->arrival_hour = $arrival_hour;
-
-        return $this;
-    }
 
     public function getConducteur(): ?User
     {

@@ -17,7 +17,7 @@ class BrandController extends AbstractController
     public function listeMarque(BrandRepository $doctrine, SerializerInterface $serializerInterface): JsonResponse
     {
         $liste = $doctrine->findAll();
-        $listeJson = $serializerInterface->serialize($liste, 'json', ['groups' => 'brand:read']);
+        $listeJson = $serializerInterface->serialize($liste, 'json', ['groups' => 'GetBrand']);
 
         return new JsonResponse($listeJson, 200, [], true);
     }

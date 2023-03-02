@@ -15,11 +15,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
     #[ORM\Column]
     private ?int $id = null;
 
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
@@ -30,15 +28,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetUser"])]
     private ?string $password = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetUser"])]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser", "GetRide", "GetCar"])]
+    #[Groups(["GetUser"])]
     private ?string $lastname = null;
 
     #[ORM\OneToMany(mappedBy: 'conducteur', targetEntity: Ride::class)]
@@ -48,6 +46,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private Collection $user_ride;
 
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Car::class)]
+    #[Groups(["GetUser"])]
     private Collection $cars;
 
     public function __construct()
