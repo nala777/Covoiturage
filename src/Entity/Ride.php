@@ -15,27 +15,37 @@ class Ride
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(["GetRide"])]
     private ?int $id = null;
 
     #[ORM\ManyToOne]
+    #[Groups(["GetRide"])]
     private ?City $start_city = null;
 
     #[ORM\ManyToOne]
+    #[Groups(["GetRide"])]
     private ?City $arrival_city = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups(["GetRide"])]
     private ?int $kms = null;
 
 
-    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    #[Groups(["GetRide"])]
     private ?\DateTimeInterface $start_hour = null;
 
 
     #[ORM\ManyToOne(inversedBy: 'rides')]
+    #[Groups(["GetRide"])]
     private ?User $conducteur = null;
 
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'user_ride')]
+    #[Groups(["GetRide"])]
     private Collection $users;
+
+    #[ORM\Column(type: Types::SMALLINT, nullable: true)]
+    private ?int $places_available = null;
 
     public function __construct()
     {
@@ -116,6 +126,17 @@ class Ride
         return $this->users;
     }
 
+    public function getPlaceAvailable(): ?int
+    {
+        return $this->places_available;
+    }
+
+    public function setPlaceAvailable(?int $places_available): self
+    {
+        $this->places_available = $places_available;
+
+        return $this;
+    }
     public function addUser(User $user): self
     {
         if (!$this->users->contains($user)) {

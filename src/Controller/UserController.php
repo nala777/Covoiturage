@@ -29,7 +29,7 @@ class UserController extends AbstractController
     {
         $personne = $doctrine->find($id);
         if ($personne) {
-            $personneJson = $serializerInterface->serialize($personne, 'json');
+            $personneJson = $serializerInterface->serialize($personne, 'json', ['groups' => 'GetUser']);
             return new JsonResponse($personneJson, 200, [], true);
         } else {
             return new JsonResponse("Personne non trouvée", 404, [], true);

@@ -21,7 +21,7 @@ class Car
     private ?string $registration_car = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetCar", "GetUser"])]
+    #[Groups(["GetCar", "GetUser", "GetRide"])]
     private ?string $color = null;
 
     #[ORM\Column(type: Types::SMALLINT, nullable: true)]
@@ -29,11 +29,11 @@ class Car
     private ?int $places = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]
-    #[Groups(["GetCar", "GetUser"])]
+    #[Groups(["GetCar", "GetUser", "GetRide"])]
     private ?Brand $type_of = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser"])]
+    #[Groups(["GetUser", "GetRide"])]
     private ?string $model = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]

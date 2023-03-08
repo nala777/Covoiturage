@@ -32,11 +32,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser"])]
+    #[Groups(["GetUser", "GetRide"])]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(["GetUser"])]
+    #[Groups(["GetUser", "GetRide"])]
     private ?string $lastname = null;
 
     #[ORM\OneToMany(mappedBy: 'conducteur', targetEntity: Ride::class)]
@@ -46,7 +46,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private Collection $user_ride;
 
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Car::class)]
-    #[Groups(["GetUser"])]
+    #[Groups(["GetUser", "GetRide"])]
     private Collection $cars;
 
     public function __construct()
